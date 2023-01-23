@@ -1,0 +1,58 @@
+{% include'admin/header.html' %}
+
+<section class="mobile">
+  <div class="formulario">
+    <form action="/admin/juegos/guardar" method="post" enctype="multipart/form-data">
+      <ul>
+        <li>
+          <label for="name">Nombre del Juego:</label>
+          <input type="text" id="name" name="name">
+        </li>
+        <li>
+          <label for="imagen">Imagen:</label>
+          <input type="file" id="image" name="imagen">
+        </li>
+        <li>
+          <label for="torrent">Torrent:</label>
+          <input type="file" id="descarga" name="torrent">
+        </li>
+      </ul>
+      <button type="submit">Agregar</button>
+    </form>
+  </div>
+
+  <div class="tabla">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Imagen</th>
+          <!-- <th>Torrent</th> -->
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for juego in juegos%}
+        <tr>
+          <td>{{juego[0]}}</td>
+          <td>{{juego[1]}}</td>
+          <td>
+            <img src="/imgames/{{juego[2]}}"  width="70" height="70" alt="">
+          </td>
+          <!-- <td>{{juego[3]}}</td> -->
+          <td>
+            <form action="/admin/juegos/borrar" method="post">
+              <input value="{{juego[0]}}" type="hidden" name="txtID" id="txtID">
+              <button type="submit">Eliminar</button>  
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+{% include'admin/footer.html' %}

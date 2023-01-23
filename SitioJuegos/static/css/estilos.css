@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --tamano-fuente: 1.5rem;
+    --tamano-fuente-tabla: 1rem;
+}
+
+/* PAGINA INDEX */
+header{
+    width: 100%;
+    margin-top: 2%;
+    height: auto;
+    display: block;
+}
+.title{
+    font-size: var(--tamano-fuente);
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    overflow: hidden;
+}
+.container_menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+    width: 100%; 
+}
+nav ul{
+    width: 300px;
+    display: flex;
+    
+}
+nav ul li{
+    margin: auto;
+    list-style: none;
+    /* border: 1px solid red; */
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+section{
+    /* margin-top: 50px; */
+    display: flex;
+    width: 100%;
+}
+.bloque1{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin: 10px 0px;        
+}
+.image_1  {
+    width: 100%;
+    height: auto;
+}
+.image_1 img{
+    width: 100%;
+    object-position: center;
+    object-fit: contain;
+}
+.text_1{
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.text_2{
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.parrafo1{
+    margin: auto;
+}
+
+.parrafo2{
+    margin: auto;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 5% 0% 5% 0% ;
+}
+
+/* PAGINA JUEGOS */
+.juegos{
+    display: block;
+    
+}
+.juegos figure{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.juegos figure img{
+    width: 100%;
+    height: auto;    
+}
+
+.juegos figure figcaption{
+    width: 100%;
+    margin: auto ;
+    text-align: center;
+}
+
+/* PAGINA NOSOTROS */
+
+.nosotros{
+    display: block;
+}
+
+.nosotros img{
+    margin: 5% 10%;
+    width: 80%;
+    height: auto;
+    
+}
+
+.texto_p p{
+    margin: 0% 5%;
+    text-align: justify;
+}
+
+/* PAGINA LOGIN*/
+.form{
+    margin: 10% 20%;
+    display: block;
+    width: 60%;
+    text-align: center;
+    /* border: 1px solid red;      */
+}
+.form ul li{
+    margin: 10% 0%;
+}
+.form ul{
+    list-style: none;
+}
+
+/* PAGINA ADMINISTRADOR DE JUEGOS */
+.mobile{
+    display: block;
+    width: 100%;
+}
+.formulario{
+    width: 100%;
+    margin: 5% 0%;
+}
+.formulario form ul{
+    list-style: none;
+}
+.formulario form ul li{
+    margin: 2% 15%;
+} 
+.formulario form button{
+    margin: 2% 15%;
+} 
+
+.tabla {
+    width: 100%;
+    font-size: var(--tamano-fuente-tabla);
+}   
+
+.tabla table{
+    margin: 0% 5%;
+}
+
+
+/*------------------INICIO DE LA MEDIA QUERY PARA ESCRITORIO-----------------*/
+@media (min-width: 750px) {
+/* PAGINA INDEX */
+    .bloque1{
+        display: flex;
+    }
+
+    .image_1{
+        display: flex;
+        width: 50%;
+        display: flex;
+        justify-content: center;        
+    }
+
+    .image_1 img{
+        width: 80%;
+    }
+
+    .text_1{
+        width: 50%;
+    }
+
+    .parrafo1{
+        margin: 20%;
+    }
+
+    .parrafo2{
+        margin: 20%;
+    }
+
+    /* PAGINA JUEGOS */
+    .juegos{    
+        width: 100%; 
+        overflow: hidden;
+    }
+
+    .juegos figure{
+        width: 30%;
+        margin: 3% 1.65%;
+        float: left;
+        /* border: 1px solid red; */
+    }
+
+    .juegos figure img{
+        width: 100%;        
+        height: 250px;
+          
+    }
+
+    .juegos figure figcaption{
+        width: 100%;
+        margin: auto ;
+        text-align: center;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        margin: 2% 0% 2% 0% ;
+    }
+
+    /* PAGINA NOSOTROS */
+
+    .nosotros {
+        display: flex;
+    }
+
+    .nosotros img{
+        margin: 2% 5%;
+        width: 40%;
+        height: auto;
+    }
+
+    .texto_p{
+        width: 40%;
+    }
+
+    .texto_p p{
+        width: 50%;
+        height: auto;
+        margin: 25% 25%;
+        text-align: justify;
+    }
+
+    /* PAGINA LOGIN*/
+    .form{
+        margin: 10% 20%;
+        display: block;
+        width: 60%;
+        text-align: center;
+        /* border: 1px solid red;      */
+    }
+    .form ul li{
+        margin: 2% 0%;
+    }
+    .form ul{
+        list-style: none;
+    }
+
+    /* PAGINA ADMINISTRADOR JUEGOS */
+    .mobile{
+        display: flex;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    .formulario{
+        width: 50%;
+        text-align: center;
+        margin: 10% 0%;
+        /* border: 1px solid red;  */
+    }
+
+    .formulario form ul li{
+        margin: 2% 0%;
+    }    
+    
+    .tabla{
+        width: 100%;
+        margin: 3% 0%;
+        font-size: var(--tamano-fuente);
+        /* border: 1px solid green;  */
+    } 
+}

@@ -1,0 +1,21 @@
+{% include'cliente/header.html' %}
+<body>
+<!-- <div class="row">
+    <div class="col-md-4">
+        <div class="card"> -->
+
+        <!-- </div>
+    </div>
+
+</div> -->
+        <section class="juegos">
+            {% for juego in juegos%}
+            <figure>
+                <img src="/imgames/{{juego[2]}}">
+                    <figcaption>{{juego[1]}}</figcaption>
+                    <a href="/descarga/{{juego[3]}}" role="button">Descargar</a>
+            </figure>            
+            {% endfor %}
+        </section>
+
+{% include'cliente/footer.html' %}
